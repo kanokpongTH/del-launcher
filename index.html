@@ -12,11 +12,18 @@
   <title>DEL</title>
 </head>
 <body style="margin:0;background:#000;color:#fff;font-family:Arial,sans-serif">
-  <p style="padding:24px"><a href="https://script.google.com/macros/s/AKfycby16SVZfKuTQkzrNDC4b8V8_eGYmNqhSXcRKDJds97WrDhaRPshDlElS7JJUJdIMu8l/exec" style="color:#fff">Open DEL</a></p>
+  <main style="padding:24px;text-align:center">
+    <h1 style="font-size:48px;letter-spacing:.12em;margin:20vh 0 16px">DEL</h1>
+    <p><a href="https://script.google.com/macros/s/AKfycby16SVZfKuTQkzrNDC4b8V8_eGYmNqhSXcRKDJds97WrDhaRPshDlElS7JJUJdIMu8l/exec" style="color:#fff">Open DEL</a></p>
+  </main>
   <script>
-    setTimeout(function () {
-      location.replace('https://script.google.com/macros/s/AKfycby16SVZfKuTQkzrNDC4b8V8_eGYmNqhSXcRKDJds97WrDhaRPshDlElS7JJUJdIMu8l/exec');
-    }, 300);
+    (function () {
+      var isStandalone = window.navigator.standalone === true ||
+        window.matchMedia('(display-mode: standalone)').matches;
+      if (isStandalone) {
+        location.replace('https://script.google.com/macros/s/AKfycby16SVZfKuTQkzrNDC4b8V8_eGYmNqhSXcRKDJds97WrDhaRPshDlElS7JJUJdIMu8l/exec');
+      }
+    }());
   </script>
 </body>
 </html>
